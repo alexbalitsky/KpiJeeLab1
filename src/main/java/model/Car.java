@@ -2,6 +2,7 @@ package model;
 
 /**
  * Created by obalitskyi on 10/3/16.
+ * model clas used to map table cars to jbject
  */
 public class Car {
     private Long id;

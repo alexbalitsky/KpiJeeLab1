@@ -9,13 +9,14 @@ import java.util.List;
 
 /**
  * Created by obalitskyi on 10/4/16.
+ * super class for CRUD operations
  */
 
-public abstract class AbstractDAO<T> {
+public abstract class AbstractCRUD<T> {
     private String DBName;
     private String tableName;
 
-    public AbstractDAO(String DBName, String tableName) {
+    public AbstractCRUD(String DBName, String tableName) {
         this.DBName = DBName;
         this.tableName = tableName;
     }

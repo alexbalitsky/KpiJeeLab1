@@ -1,5 +1,5 @@
-import dao.AbstractDAO;
-import dao.CarDAO;
+import dao.AbstractCRUD;
+import dao.CarCRUD;
 import model.Car;
 import org.junit.*;
 
@@ -7,16 +7,14 @@ import static org.junit.Assert.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by obalitskyi on 10/3/16.
  */
 public class CRUDTest {
     private static Connection connection = null;
-    static AbstractDAO<Car> dao = null;
+    static AbstractCRUD<Car> dao = null;
 
     private static String host = "localhost";
     private static Integer port = 3306;
@@ -29,7 +27,7 @@ public class CRUDTest {
     public static void init() throws SQLException {
         connection = JDBCConnectionFactory.getConnection(host, port, DBName, user, password);
         assert connection != null;
-        dao = new CarDAO(DBName, tableName);
+        dao = new CarCRUD(DBName, tableName);
         dao.createDB(connection);
     }
 

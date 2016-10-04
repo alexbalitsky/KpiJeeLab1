@@ -2,16 +2,16 @@ package dao;
 
 import model.Car;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by obalitskyi on 10/3/16.
+ * class for specific CRUD operations
  */
-public class CarDAO extends AbstractDAO<Car>{
+public class CarCRUD extends AbstractCRUD<Car> {
 
-    public CarDAO(String DBName, String tableName) {
+    public CarCRUD(String DBName, String tableName) {
         super(DBName, tableName);
 
     }

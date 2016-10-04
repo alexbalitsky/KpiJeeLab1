@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 /**
  * Created by obalitskyi on 10/3/16.
+ * class to get JDBC connection
  */
 public class JDBCConnectionFactory {
 
